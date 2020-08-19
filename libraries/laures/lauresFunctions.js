@@ -1,38 +1,3 @@
-// getters and setters
-function get__viewportW() {
-    vw = $(window).width();
-    return vw;
-}
-function get__navHeight() {
-    hn = document.querySelector('.l-nav').clientHeight;
-    return hn;
-}
-function get__page() {
-    var fullUrl = window.location.href.split('/').reverse()[0];
-    var testHash = fullUrl.split('#');
-    if (testHash !== fullUrl) {
-        fullUrl = testHash[0];
-    }
-    if ($.inArray(fullUrl, ['', undefined, null, 'home']) >= 0) {
-        fullUrl = 'home';
-    }
-    return fullUrl;
-}
-function get__hash() {
-    var hashOfThePage = window.location.hash;
-    if ($.inArray(hashOfThePage, ['', undefined, null]) >= 0) {
-        hashOfThePage = 'noHash';}
-    return hashOfThePage;
-}
-
-function initGettersAndSetters() {
-    get__viewportW();
-    get__navHeight();
-    get__page();
-    get__hash();
-    console.log('Page: ' + get__page() + ' | Hash: ' + get__hash());
-}
-
 // Limitação de caracteres
 function limitCaracters(el, nMaxCaracters) {
     el.each(function() {
@@ -77,16 +42,6 @@ function changeTouchClickText() {
 }
 // Example:
 // $(window).on('load', changeTouchClickText());
-
-
-// classe diferente no body para cada página
-function classOnBody(el) {
-    var mainId = el;
-    var prefixClass = 'bodyClass--';
-    $('body').addClass(prefixClass + mainId);
-}
-// Example:
-// $(window).on('load', classOnBody($('main').attr('id')));
 
 
 // Identifica direcao do scroll
@@ -142,22 +97,3 @@ function goToSection__scroll(elScrollDestiny, distanceIfScrollGoingToUp, distanc
 //     var finalDestiny = $(this).attr('href');
 //     goToSection__scroll(finalDestiny, 100, 50, 700, 10);
 // });
-
-
-// position sticky control
-function stickyPosition(stickyElement, initDistance, scrolledDistante) {
-    var el = $(stickyElement);
-    var nav = $('.l-nav');
-    if (nav.hasClass('scrolled')) {
-        if (nav.hasClass('hidden')) {
-            el.css('top', initDistance);
-        } else {
-            el.css('top', scrolledDistante);
-        }
-    } else {
-        el.css('top', initDistance);
-    }
-}
-// Example;
-// $(window).on('scroll', function () {stickyPosition('.u-stickyElement', 0, get__navHeight());});
-// $(window).on('load', function () {stickyPosition('.u-stickyElement', 0, get__navHeight());});

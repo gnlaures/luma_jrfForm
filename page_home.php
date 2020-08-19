@@ -1,18 +1,18 @@
 <div class="jrfHero">
 	<main>
 		<form action="#" id="formJRF" class="c-simpleForm">
-			<fieldset id="intro">
+			<section id="intro" class="fieldsetHero">
 				<div class="c-simpleForm__fieldsetTitle"></div>
 				<div class="c-simpleForm__fields">
 					<h1><strong>Bem vindo</strong> ao seguro simplificado</h1>
 					<p>A partir de agora você será direcionado a passos que nos darão informações importantes para
 						ajuda-lo a encontrar a melhor opção de seguro para seu bem.</p>
 				</div>
-			</fieldset>
-			<fieldset id="dados-pessoais">
+			</section>
+			<section id="dados-pessoais" class="fieldsetHero">
 				<div class="c-simpleForm__fieldsetTitle">
 					<div>
-						<h2>Dados pessoais</h2>
+						<h2>Dados<br>pessoais</h2>
 						<p>Para que possamos identificar a melhor opção para o seu veículo precisaremos de alguns dados
 							iniciais.</p>
 					</div>
@@ -34,10 +34,13 @@
 							<input id="formJRF_telefone" type="tel" class="field foneMask" name="telefone"
 									placeholder="(__) ____-_____" required>
 						</li>
-						<li class="u-fw50 u-dflex">
-							<label for="formJRF_data" class="u-fw40">Data</label>
-							<input id="formJRF_data" type="text" class="u-fw60 field dataMask" name="data"
-									placeholder="__/__/____" required>
+						<li class="u-fw50 liData">
+							<label for="formJRF_dataD">Data de Nascimento</label>
+							<div class="fieldsBox">
+								<input id="formJRF_dataD" type="text" name="data" required>
+								<input id="formJRF_dataM" type="text" name="data" required>
+								<input id="formJRF_dataY" type="text" name="data" required>
+							</div>
 						</li>
 						<li class="u-fw50">
 							<label for="formJRF_cpf">CPF</label>
@@ -46,11 +49,11 @@
 						</li>
 					</ul>
 				</div>
-			</fieldset>
-			<fieldset id="dados-veiculo">
+			</section>
+			<section id="dados-veiculo" class="fieldsetHero">
 				<div class="c-simpleForm__fieldsetTitle">
 					<div>
-						<h2>Dados do veículo</h2>
+						<h2>Dados<br>do veículo</h2>
 						<p>Informe os dados do veículo para que possamos entender a melhor opção de seguro</p>
 					</div>
 				</div>
@@ -121,8 +124,8 @@
 						</li>
 					</ul>
 				</div>
-			</fieldset>
-			<fieldset id="informacoes-complementares">
+			</section>
+			<section id="informacoes-complementares" class="fieldsetHero">
 				<div class="c-simpleForm__fieldsetTitle">
 					<div>
 						<h2><strong>Informações </strong>complementares</h2>
@@ -243,10 +246,13 @@
 							<input id="formJRF_condutorPrincipal" type="text" name="condutorPrincipal" class="field"
 									required>
 						</li>
-						<li class="u-fw50 u-dflex">
-							<label for="formJRF_data2" class="u-fw40">Data</label>
-							<input id="formJRF_data2" type="text" class="u-fw60 field dataMask" name="data2"
-									placeholder="__/__/____" required>
+						<li class="u-fw50 liData">
+							<label for="formJRF_dataD2">Data de Nascimento</label>
+							<div class="fieldsBox">
+								<input id="formJRF_dataD2" type="text" name="data" required>
+								<input id="formJRF_dataM2" type="text" name="data" required>
+								<input id="formJRF_dataY2" type="text" name="data" required>
+							</div>
 						</li>
 						<li class="u-fw50 liSelect">
 							<label for="formJRF_sexo2">Sexo</label>
@@ -278,7 +284,7 @@
 						</li>
 					</ul>
 				</div>
-			</fieldset>
+			</section>
 		</form>
 	</main>
 	<aside>

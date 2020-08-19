@@ -53,6 +53,309 @@ body {
 		}
 	}
 }
+.c-simpleForm {
+	display: block;
+	
+	h1 {
+		@include title($fs: 30px);
+		@include opacity(0.7);
+		margin-bottom: 15px;
+	}
+	h2 {
+		@include title($ta: right, $fs: 25px);
+		@include opacity(0.7);
+		margin-bottom: 15px;
+	}
+	p {
+		@include paragrafos();
+		max-width: 600px;
+	}
+	
+	.fieldsetHero {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		flex-wrap: nowrap;
+	}
+	&__fieldsetTitle {
+		@include flexWidth(205px);
+		padding-top: 20px;
+		padding-bottom: 20px;
+		padding-right: 35px;
+		p {
+			text-align: right;
+		}
+	}
+	&__fields {
+		flex: 1 1 auto;
+		padding-left: 35px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		border-left: 1px solid rgba(0,0,0,0.15);
+	}
+	
+	ul {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+	li {
+		position: relative;
+		display: block;
+		border:2px solid $white;
+	}
+	li.liBtn {
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-end;
+		.field--hiddenValidate, input {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			display: inline;
+			width: 0;
+			height: 0;
+			@include opacity(0);
+		}
+	}
+	li.liFile {
+		.inputText {
+			position: relative;
+			z-index: 1;
+			cursor: pointer;
+			padding-right: 50px;
+		}
+		.inputAttach {
+			cursor: pointer;
+			background: $white;
+			position: absolute;
+			z-index: 2;
+			left: 15px;
+			bottom: -5px;
+			right: 0;
+			width: 100%;
+			@include calc(width, 100%, '-', 30px);
+			@include opacity(0);
+		}
+		&:after {
+			@include transforms(rotate(0deg), center);
+			@include transition();
+			content: '';
+			width: 20px;
+			height: 20px;
+			display: block;
+			position: absolute;
+			bottom: 26px;
+			right: 35px;
+			background: url(#{$media_icons}icon_attach.svg);
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: contain;
+			z-index: 1;
+		}
+	}
+	li.liSelect {
+		> div {
+			display: block;
+			width: 100%;
+			position: relative;
+			&:after {
+				@include transforms(rotate(0deg) translateY(50%), center);
+				@include transition();
+				content: '';
+				width: 12px;
+				height: 10px;
+				display: block;
+				position: absolute;
+				bottom: 50%;
+				right: 20px;
+				background: url(#{$media_assets}caret-down.svg);
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: contain;
+			}
+		}
+		&.is-active {
+			> div {
+				&:after {
+					@include transforms(rotate(180deg) translateY(50%), bottom);
+				}
+			}
+		}
+	}
+	li.liCheckbox {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		flex-wrap: wrap;
+		div {
+			@include flexWidth(100%);
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			flex-wrap: nowrap;
+			margin-bottom: 10px;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+			* {
+				cursor: pointer;
+			}
+			label {
+				@include paragrafos();
+				text-transform: none;
+				order: 2;
+				padding-left: 10px;
+				margin-bottom: 0;
+				position: relative;
+				top: 0;
+				left: 0;
+			}
+			input {
+				@include flexWidth(24px);
+				@include roundedAll(12px);
+				display: block;
+				padding: 0;
+				height: 24px;
+				&:checked {
+					background: url(#{$media_icons}/icon_checked.svg);
+					background-repeat: no-repeat;
+					background-size: cover;
+					background-position: center;
+				}
+			}
+		}
+	}
+	li.liRadio {
+		div {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			flex-wrap: nowrap;
+			margin-bottom: 10px;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+			* {
+				cursor: pointer;
+			}
+			label {
+				@include paragrafos();
+				text-transform: none;
+				order: 2;
+				padding-left: 10px;
+				margin-bottom: 0;
+			}
+			input {
+				@include flexWidth(24px);
+				display: block;
+				padding: 0;
+				height: 24px;
+				&:checked {
+					background: url(#{$media_icons}/icon_checked.svg);
+					background-repeat: no-repeat;
+					background-size: cover;
+					background-position: center;
+				}
+			}
+		}
+	}
+	li.liData {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		label {
+			flex: 1 1 auto;
+			text-align: right;
+			position: relative;
+			top: 0;
+			left: 0;
+			padding-right: 15px;
+		}
+		.fieldsBox {
+			@include flexWidth(170px);
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			flex-wrap: nowrap;
+			input {
+				@include flexWidth(33.3%);
+				margin-bottom: 0;
+				padding-top: 0;
+				padding-left: 0;
+				padding-right: 0;
+				padding-bottom: 0;
+				height: 52px;
+				line-height: 52px;
+				text-align: center;
+				border-right: 2px solid $white;
+				&:last-of-type {
+					border-right: 0;
+				}
+			}
+		}
+	}
+	label, input, select, textarea {
+		@include transition();
+		display: block;
+		width: 100%;
+	}
+	input, select, textarea {
+		background: rgba(196,196,196,0.25);
+	}
+	input, select, textarea {
+		@include paragrafos;
+		@include placeholder {
+			@include paragrafos($tc: $placeholderText);
+		}
+		&.error{
+			border: 1px solid $feedbackError;
+		}
+		&:focus {
+			background: rgba(196,196,196,0.45);
+		}
+	}
+	input, select {
+		height: 52px;
+		line-height: 30px;
+		padding-top: 22px;
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-bottom: 0;
+	}
+	select {
+		&:invalid {
+			color: $placeholderText;
+		}
+	}
+	textarea {
+		padding: 15px 20px;
+		line-height: 1.5;
+		height: 100px;
+		max-height: 200px;
+		min-height: 100px;
+		resize: vertical;
+	}
+	label {
+		@include opacity(0.5);
+		text-transform: uppercase;
+		color: #000;
+		display: block;
+		font-size: 11px;
+		position: absolute;
+		top: 10px;
+		left: 15px;
+		&.error{
+			font-size: 12px;
+			color: $feedbackError;
+			bottom: -5px;
+			left: 15px;
+			position: absolute;
+		}
+	}
+}
 
 // #
 aside {
