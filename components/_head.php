@@ -47,7 +47,7 @@
 	<meta name="theme-color" content="#0a1b1f">
 
 	<!-- css files -->
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <?php echoCssFiles($load_this_css); ?>
 </head>
 

@@ -1,122 +1,87 @@
 // <>
 body {
 	@include scroll();
-	overflow-x: hidden;
 }
 
-// .
-.u-maxRow {
-	padding-top: 94px;
-}
-
-// l-
-.l-nav {
-	@include transition($ease: ease-in);
+// c
+.c-formSteps {
 	display: block;
-	width: 100%;
-	max-width: $maxRowWidth;
-	margin: 0 auto;
-	padding: 20px 0;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	background: $primaryDark;
-	z-index: 10;
-	.u-containerFlex {
-		flex-wrap: wrap;
-	}
-	
-	&__brand {
-		@include flexWidth(200px);
+	li {
 		display: block;
-		a, img {
-			display: block;
-			width: 100%;
+		margin-bottom: 25px;
+		&:last-of-type {
+			margin-bottom: 0;
 		}
 	}
-	&__contentHero {
-		@include scroll();
-		flex: 1 1 auto;
+	a {
+		width: 100%;
 		display: flex;
 		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: flex-end;
 		align-items: center;
-		position: relative;
-		z-index: 3;
-	}
-	&__menu {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		position: relative;
-		z-index: 2;
-		> li {
-			display: block;
-			position: relative;
-			a {
-				color: $white;
-				cursor: pointer;
-				padding: 0 15px;
-				&:hover {
-					color: $secondary;
-				}
+		justify-content: space-between;
+		div {
+			@include transition();
+			@include title($fs: 16px, $tc: $white);
+			@include opacity(0.3);
+			padding-right: 15px;
+			strong {
+				display: inline;
 			}
 		}
-	}
-	&__social {
-		display: block;
-		padding-left: 15px;
-	}
-	&__cta {
-		padding-left: 30px;
-	}
-	
-	&__showOnlyInResponsive {
-		display: none;
-	}
-	
-	&__maskMenu {
-		&.maskAll,
-		&.maskMenu {
-			@include u-hideElement();
-			z-index: 2;
-			position: fixed;
-			top: 0;
-			left: 0;
-			right: 0;
-			width: 100%;
-			height: 100%;
-			min-height: 100vh;
-			display: block;
-			background: rgba(0,0,0,0.15);
-			&.is-active {
-				@include u-showElement();
+		span {
+			@include transition();
+			@include flexWidth(15px);
+			@include opacity(0.2);
+			width: 15px;
+			height: 15px;
+			background: $white;
+			&.is-checked {
+				@include opacity(1);
+				background: $feedbackSuccess;
+				border: 3px solid $white;
 			}
 		}
-		&.maskMenu {
-			z-index: 1;
+		&:hover {
+			div {
+				@include opacity(0.5);
+			}
 		}
-	}
-	
-	&.hidden {
-		top: -300px;
-	}
-	&.scrolled {
-		padding: 5px 0;
-		.c-hamburguer {
-			&.is-active {
-				margin-top: 5px;
+		&.is-active {
+			div {
+				@include opacity(0.7);
 			}
 		}
 	}
 }
-.l-footer {
-	background: $mutedGray;
-	padding: 30px 0;
-}
-
-// s-
 
 // #
+aside {
+	@include scroll();
+	overflow: auto;
+	position: fixed;
+	right: 0;
+	top: 0;
+	display: block;
+	width: 100%;
+	max-width: 450px;
+	height: 100vh;
+	background: $primary;
+	padding: 90px 65px 65px 65px;
+	h1 {
+		@include title($tc: $white);
+		@include opacity(0.7);
+		margin-bottom: 20px;
+	}
+	p {
+		@include paragrafos($tc: $white);
+		@include opacity(0.7);
+	}
+	.c-formSteps {
+		margin-top: 60px;
+	}
+}
+
+main {
+	width: 100%;
+	padding: 90px 515px 90px 65px;
+}

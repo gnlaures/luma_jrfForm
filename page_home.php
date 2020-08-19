@@ -5,37 +5,44 @@
 				<div class="c-simpleForm__fieldsetTitle"></div>
 				<div class="c-simpleForm__fields">
 					<h1><strong>Bem vindo</strong> ao seguro simplificado</h1>
-					<p>A partir de agora você será direcionado a passos que nos darão informações importantes para ajuda-lo a encontrar a melhor opção de seguro para seu bem.</p>
+					<p>A partir de agora você será direcionado a passos que nos darão informações importantes para
+						ajuda-lo a encontrar a melhor opção de seguro para seu bem.</p>
 				</div>
 			</fieldset>
 			<fieldset id="dados-pessoais">
 				<div class="c-simpleForm__fieldsetTitle">
 					<div>
 						<h2>Dados pessoais</h2>
-						<p>Para que possamos identificar a melhor opção para o seu veículo precisaremos de alguns dados iniciais.</p>
+						<p>Para que possamos identificar a melhor opção para o seu veículo precisaremos de alguns dados
+							iniciais.</p>
 					</div>
 				</div>
 				<div class="c-simpleForm__fields">
 					<ul>
 						<li class="u-fw50">
 							<label for="formJRF_nome">Nome completo</label>
-							<input id="formJRF_nome" type="text" name="nome" class="field" placeholder="Digite seu nome" required>
+							<input id="formJRF_nome" type="text" name="nome" class="field" placeholder="Digite seu nome"
+									required>
 						</li>
 						<li class="u-fw50">
 							<label for="formJRF_email">E-mail</label>
-							<input id="formJRF_email" type="email" name="email" class="field" placeholder="example@site.com" required>
+							<input id="formJRF_email" type="email" name="email" class="field"
+									placeholder="example@site.com" required>
 						</li>
 						<li class="u-fw50">
 							<label for="formJRF_telefone">Telefone</label>
-							<input id="formJRF_telefone" type="tel" class="field foneMask" name="telefone" placeholder="(__) ____-_____" required>
+							<input id="formJRF_telefone" type="tel" class="field foneMask" name="telefone"
+									placeholder="(__) ____-_____" required>
 						</li>
 						<li class="u-fw50 u-dflex">
 							<label for="formJRF_data" class="u-fw40">Data</label>
-							<input id="formJRF_data" type="text" class="u-fw60 field dataMask" name="data" placeholder="__/__/____" required>
+							<input id="formJRF_data" type="text" class="u-fw60 field dataMask" name="data"
+									placeholder="__/__/____" required>
 						</li>
 						<li class="u-fw50">
 							<label for="formJRF_cpf">CPF</label>
-							<input id="formJRF_cpf" type="text" class="field cpfMask" name="cpf" placeholder="___.___.___-__" required>
+							<input id="formJRF_cpf" type="text" class="field cpfMask" name="cpf"
+									placeholder="___.___.___-__" required>
 						</li>
 					</ul>
 				</div>
@@ -119,7 +126,8 @@
 				<div class="c-simpleForm__fieldsetTitle">
 					<div>
 						<h2><strong>Informações </strong>complementares</h2>
-						<p>Algumas informações sobre acessórios ou características podem fazer diferença na hora de gerar uma cotação de seguro</p>
+						<p>Algumas informações sobre acessórios ou características podem fazer diferença na hora de
+							gerar uma cotação de seguro</p>
 					</div>
 				</div>
 				<div class="c-simpleForm__fields">
@@ -142,7 +150,8 @@
 								<input type="checkbox" id="caracteristica4">
 							</div>
 							<div>
-								<label for="caracteristica5">É blindado; de empresa; de leilão ou com chassi remarcado</label>
+								<label for="caracteristica5">É blindado; de empresa; de leilão ou com chassi
+									remarcado</label>
 								<input type="checkbox" id="caracteristica5">
 							</div>
 							<div>
@@ -172,7 +181,8 @@
 						</li>
 						<li class="u-fw50">
 							<label for="formJRF_cep">CEP</label>
-							<input id="formJRF_cep" type="text" class="field cepMask" name="cep" placeholder="___.___.___-__" required>
+							<input id="formJRF_cep" type="text" class="field cepMask" name="cep"
+									placeholder="___.___.___-__" required>
 						</li>
 						<li class="u-fw50 liLink">
 							<a href="#">Não sei o meu CEP</a>
@@ -229,12 +239,14 @@
 					</ul>
 					<ul class="u-dnone js-otherDriver">
 						<li class="u-fw50">
-								<label for="formJRF_condutorPrincipal">Condutor Principal</label>
-							<input id="formJRF_condutorPrincipal" type="text" name="condutorPrincipal" class="field" required>
+							<label for="formJRF_condutorPrincipal">Condutor Principal</label>
+							<input id="formJRF_condutorPrincipal" type="text" name="condutorPrincipal" class="field"
+									required>
 						</li>
 						<li class="u-fw50 u-dflex">
 							<label for="formJRF_data2" class="u-fw40">Data</label>
-							<input id="formJRF_data2" type="text" class="u-fw60 field dataMask" name="data2" placeholder="__/__/____" required>
+							<input id="formJRF_data2" type="text" class="u-fw60 field dataMask" name="data2"
+									placeholder="__/__/____" required>
 						</li>
 						<li class="u-fw50 liSelect">
 							<label for="formJRF_sexo2">Sexo</label>
@@ -258,7 +270,8 @@
 						</li>
 						<li class="u-fw50">
 							<label for="formJRF_cep2">CEP</label>
-							<input id="formJRF_cep2" type="text" class="field cepMask" name="cep2" placeholder="_____-___" required>
+							<input id="formJRF_cep2" type="text" class="field cepMask" name="cep2"
+									placeholder="_____-___" required>
 						</li>
 						<li class="u-fw50 liBtn">
 							<button class="c-btn">Enviar</button>
@@ -270,24 +283,34 @@
 	</main>
 	<aside>
 		<h1><strong>Resumo </strong>de suas informações</h1>
-		<p>Abaixo você poderá acompanhar de forma simples todos os passos a serem executadods e poderá retornar a qualquer um para editar ao longo de sua simulação.</p>
-		<p>Se tiver alguma dúvida entre em contato com nossa central de atendimento e teremos imenso prazer em ajuda-lo</p>
+		<p>Abaixo você poderá acompanhar de forma simples todos os passos a serem executadods e poderá retornar a
+			qualquer um para editar ao longo de sua simulação.</p>
+		<p>Se tiver alguma dúvida entre em contato com nossa central de atendimento e teremos imenso prazer em
+			ajuda-lo</p>
 		<ul class="c-formSteps">
-			<li class="is-active">
-				<div><strong>Dados </strong> pessoais</div>
-				<span class="jrfForm --step1 is-checked">
-			</li>
-			<li class="is-active">
-				<div><strong>Dados </strong> do veículo</div>
-				<span class="jrfForm --step2">
+			<li>
+				<a href="#" class="is-active">
+					<div><strong>Dados </strong> pessoais</div>
+					<span class="jrfForm --step1 is-checked">
+				</a>
 			</li>
 			<li>
-				<div>Acessórios</div>
-				<span class="jrfForm --step3">
+				<a href="#" class="is-active">
+					<div><strong>Dados </strong> do veículo</div>
+					<span class="jrfForm --step2">
+				</a>
 			</li>
 			<li>
-				<div>Acessórios</div>
-				<span class="jrfForm --step4">
+				<a href="#">
+					<div>Acessórios</div>
+					<span class="jrfForm --step3">
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div>Acessórios</div>
+					<span class="jrfForm --step4">
+				</a>
 			</li>
 		</ul>
 	</aside>
