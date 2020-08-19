@@ -180,6 +180,86 @@
 						<li class="u-fw100 liAdress">
 							<p>R MÁRIO C JÚNIOR - BARRA DA TIJUCA , RIO DE JANEIRO - RJ</p>
 						</li>
+					</ul>
+					<ul>
+						<h3><strong>Quem é o </strong>condutor principal?</h3>
+						<li class="u-fw100 liRadio">
+							<div>
+								<label for="radio1" class="js-userName">Célio Bitran</label>
+								<input type="radio" id="radio1" name="radioGroup" checked>
+							</div>
+							<div>
+								<label for="radio2">Outra Pessoa</label>
+								<input type="radio" id="radio2" name="radioGroup">
+							</div>
+						</li>
+					</ul>
+					<ul class="u-dnone js-firstDriver">
+						<li class="u-fw50">
+							<label for="formJRF_idadeCNH">Com quantos anos tirou a carteira?</label>
+							<input id="formJRF_idadeCNH" type="text" name="idadeCNH" class="field" required>
+						</li>
+						<li class="u-fw50">
+							<label for="formJRF_profissao">Profissão</label>
+							<input id="formJRF_profissao" type="text" name="profissao" class="field" required>
+						</li>
+						<li class="u-fw50 liSelect">
+							<label for="formJRF_moradia">Tipo de moradia</label>
+							<div>
+								<select name="moradia" id="formJRF_moradia" class="field" required>
+									<option value="" selected></option>
+									<option value="tm1">Tipo 01</option>
+									<option value="tm2">Tipo 02</option>
+								</select>
+							</div>
+						</li>
+						<li class="u-fw50 liSelect">
+							<label for="formJRF_menor">Algum menor dirige o carro?</label>
+							<div>
+								<select name="menor" id="formJRF_menor" class="field" required>
+									<option value="" selected></option>
+									<option value="s">Sim</option>
+									<option value="n">Não</option>
+								</select>
+							</div>
+						</li>
+						<li class="u-fw50 liBtn">
+							<button class="c-btn">Enviar</button>
+						</li>
+					</ul>
+					<ul class="u-dnone js-otherDriver">
+						<li class="u-fw50">
+								<label for="formJRF_condutorPrincipal">Condutor Principal</label>
+							<input id="formJRF_condutorPrincipal" type="text" name="condutorPrincipal" class="field" required>
+						</li>
+						<li class="u-fw50 u-dflex">
+							<label for="formJRF_data2" class="u-fw40">Data</label>
+							<input id="formJRF_data2" type="text" class="u-fw60 field dataMask" name="data2" placeholder="__/__/____" required>
+						</li>
+						<li class="u-fw50 liSelect">
+							<label for="formJRF_sexo2">Sexo</label>
+							<div>
+								<select name="sexo2" id="formJRF_sexo2" class="field" required>
+									<option value="" selected></option>
+									<option value="m">Masculino</option>
+									<option value="f">Feminino</option>
+								</select>
+							</div>
+						</li>
+						<li class="u-fw50 liSelect">
+							<label for="formJRF_estadoCivil2">Estado Civil</label>
+							<div>
+								<select name="estadoCivil2" id="formJRF_estadoCivil2" class="field" required>
+									<option value="" selected></option>
+									<option value="ec1">Estado Civil 01</option>
+									<option value="ec2">Estado Civil 02</option>
+								</select>
+							</div>
+						</li>
+						<li class="u-fw50">
+							<label for="formJRF_cep2">CEP</label>
+							<input id="formJRF_cep2" type="text" class="field cepMask" name="cep2" placeholder="_____-___" required>
+						</li>
 						<li class="u-fw50 liBtn">
 							<button class="c-btn">Enviar</button>
 						</li>
