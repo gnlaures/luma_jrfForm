@@ -125,15 +125,14 @@
 }
 
 // buttons / links / sub menu
-$c_btn_heightDefault: 50px;
+$c_btn_heightDefault: 52px;
 $c_btn_heightSmall: 38px;
-$c_btn_maxWidth: 220px;
-$c_btnIcon_heightDefault: 50px;
+$c_btn_maxWidth: 100%;
+$c_btnIcon_heightDefault: 52px;
 $c_btnIcon_heightSmall: 38px;
-$c_btnIcon_maxWidth: 220px;
+$c_btnIcon_maxWidth: 100%;
 .c-btn {
     @include transition();
-    @include roundedAll();
     position: relative;
     overflow: hidden;
     display: block;

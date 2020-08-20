@@ -1,154 +1,87 @@
-// l-nav
-@media screen and (max-width: 920px) {
-    .l-nav {
-        &__contentHero {
-            @include transition();
-            overflow-x: hidden;
-            overflow-y: auto;
-            display: block;
-            background: $white;
-            height: 100vh;
-            position: fixed;
-            right: -300px;
-            top: 0;
-            width: 260px;
-            max-width: 100%;
-            padding-bottom: 70px;
-            &.is-active {
-                right: 0;
+@media screen and (max-width: 1400px) {
+	aside {
+        @include flexWidth(380px);
+    }
+    main {
+        padding-right: 65px + 380px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .c-simpleForm {
+        .fieldsetHero {
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+        &__fieldsetTitle {
+            @include flexWidth(100%);
+            padding-right: 0;
+            padding-top: 0;
+            padding-bottom: 15px;
+            h2, p {
+                text-align: left;
             }
         }
-        &__menu {
-            border-bottom: 1px solid $mutedGray;
-            padding: 10px 0;
-            background: $white;
-            > li, > li a {
-                width: 100%;
-                display: block;
-                text-align: right;
-            }
-            > li a {
-                padding: 10px 20px;
-                color: $text;
-            }
+        &__fields {
+            @include flexWidth(100%);
+            border-left: 0;
+            padding-left: 0;
+            padding-top: 0;
+            padding-bottom: 0;
         }
-        &__social {
-            padding: 20px;
-            border-bottom: 1px solid $mutedGray;
-            .c-socialList {
-                justify-content: flex-end;
-            }
+    }
+}
+@media screen and (max-width: 1030px) {
+    .c-simpleForm li.u-fw50 {
+        @include flexWidth(100%);
+    }
+    .c-simpleForm li.liData {
+        justify-content: flex-start;
+        label {
+            flex: 0 1 auto;
+            width: auto;
+            display: inline;
         }
-        &__cta {
-            padding: 20px;
-            .c-btn,
-            .c-btnWithIcon {
-                max-width: 100%;
-            }
-        }
-        
-        &__showOnlyInResponsive {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: flex-end;
-            padding-right: 45px;
-            flex: 1 1 auto;
-            .l-nav__cta {
-                padding: 0;
-            }
-        }
-    
-        &__maskMenu.maskAll,
-        &__maskMenu.maskMenu {
-            background: rgba(0,0,0,0.75);
-            &.maskMenu {
-                display: none;
-            }
-        }
-        
-        .c-hamburguer {
-            display: block;
-            &.is-active {
-                margin-top: -25px;
-                right: 270px;
-            }
-        }
-        
-        .c-subMenu {
-            .c-subMenu__mask {
-                display: none !important;
-            }
-            > .c-subMenu__call {
-                text-align: right;
-                padding-right: 45px;
-                &:after {
-                    @include transforms(translateY(50%), center);
-                    left: inherit;
-                    right: 20px;
-                    bottom: 50%;
-                }
-            }
-            > .c-subMenu__content {
-                overflow-y: hidden;
-                max-height: 0;
-                position: relative;
-                top: 0;
-                padding: 0 10px;
-            }
-            
-            &.is-active {
-                > .c-subMenu__call {
-                    &:after {
-                        @include transforms(translateY(50%) rotate(180deg), center);
-                    }
-                }
-                > .c-subMenu__content {
-                    overflow-y: auto;
-                    top: 0;
-                    padding: 10px;
-                    max-height: 2500px;
-                }
-            }
-            
-            .c-subMenu {
-                .c-subMenu__call {
-                    padding-right: 35px;
-                    &:after {
-                        right: 10px;
-                    }
-                }
-            }
-        }
+    }
+}
+@media screen and (max-width: 840px) {
+    main {
+        padding-top: 0;
+        padding-left: 50px;
+        padding-bottom: 50px;
+        padding-right: 435px;
     }
 }
 @media screen and (max-width: 780px) {
-    .u-maxRow {
-        padding-top: 74px;
+    .jrfHero {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
-    .l-nav {
-        padding: 10px 0;
-        &__brand {
-            @include flexWidth(175px);
-        }
-        .c-hamburguer {
-            &.is-active {
-                margin-top: 5px;
-            }
-        }
-        &.scrolled {
-            .c-hamburguer {
-                &.is-active {
-                    margin-top: 10px;
-                }
-            }
-        }
+    main {
+        @include flexWidth(100%);
+        padding-right: 50px;
+        order: 2;
+    }
+    aside {
+        @include flexWidth(100%);
+        position: relative;
+        order: 1;
+        height: auto;
+        padding: 50px;
     }
 }
-@media screen and (max-width: 500px) {
-    .l-nav {
-        &__showOnlyInResponsive {
-            display: none;
-        }
+@media screen and (max-width: 540px) {
+    .c-simpleForm li.u-fw30 {
+        @include flexWidth(60%);
+    }
+    .c-simpleForm li.u-fw20 {
+        @include flexWidth(40%);
+    }
+}
+@media screen and (max-width: 410px) {
+    main, aside {
+        padding-left: 25px;
+        padding-right: 25px;
     }
 }

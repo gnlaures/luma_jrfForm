@@ -47,3 +47,12 @@
         width: 100%;
     }
 }
+
+@mixin labelTextStyle() {
+    @include opacity(0.5);
+    font-family: $fontFamily__default;
+    font-weight: $fwRegular;
+    text-transform: uppercase;
+    color: #000;
+    font-size: 12px;
+}

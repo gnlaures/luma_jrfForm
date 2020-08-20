@@ -20,32 +20,28 @@
 				<div class="c-simpleForm__fields">
 					<ul>
 						<li class="u-fw50">
-							<label for="formJRF_nome">Nome completo</label>
-							<input id="formJRF_nome" type="text" name="nome" class="field" placeholder="Digite seu nome"
-									required>
+							<label for="formJRF_nome">Nome completo*</label>
+							<input id="formJRF_nome" type="text" name="nome" class="field" required>
 						</li>
 						<li class="u-fw50">
-							<label for="formJRF_email">E-mail</label>
-							<input id="formJRF_email" type="email" name="email" class="field"
-									placeholder="example@site.com" required>
+							<label for="formJRF_email">E-mail*</label>
+							<input id="formJRF_email" type="email" name="email" class="field" required>
 						</li>
 						<li class="u-fw50">
-							<label for="formJRF_telefone">Telefone</label>
-							<input id="formJRF_telefone" type="tel" class="field foneMask" name="telefone"
-									placeholder="(__) ____-_____" required>
+							<label for="formJRF_telefone">Telefone*</label>
+							<input id="formJRF_telefone" type="tel" class="field foneMask" name="telefone" required>
 						</li>
 						<li class="u-fw50 liData">
 							<label for="formJRF_dataD">Data de Nascimento</label>
 							<div class="fieldsBox">
-								<input id="formJRF_dataD" type="text" name="data" required>
-								<input id="formJRF_dataM" type="text" name="data" required>
-								<input id="formJRF_dataY" type="text" name="data" required>
+								<input id="formJRF_dataD" min="1" max="31" type="number" name="data">
+								<input id="formJRF_dataM" min="1" max="12" type="number" name="data">
+								<input id="formJRF_dataY" min="1890" max="2002" type="number" name="data">
 							</div>
 						</li>
 						<li class="u-fw50">
-							<label for="formJRF_cpf">CPF</label>
-							<input id="formJRF_cpf" type="text" class="field cpfMask" name="cpf"
-									placeholder="___.___.___-__" required>
+							<label for="formJRF_cpf">CPF*</label>
+							<input id="formJRF_cpf" type="text" class="field cpfMask" name="cpf" required>
 						</li>
 					</ul>
 				</div>
@@ -60,7 +56,7 @@
 				<div class="c-simpleForm__fields">
 					<ul>
 						<li class="u-fw100 liSelect">
-							<label for="formJRF_marca">Marca</label>
+							<label for="formJRF_marca">Marca*</label>
 							<div>
 								<select name="marca" id="formJRF_marca" class="field" required>
 									<option value="" selected></option>
@@ -70,7 +66,7 @@
 							</div>
 						</li>
 						<li class="u-fw50 liSelect">
-							<label for="formJRF_modelo">Modelo</label>
+							<label for="formJRF_modelo">Modelo*</label>
 							<div>
 								<select name="modelo" id="formJRF_modelo" class="field" required>
 									<option value="" selected></option>
@@ -80,7 +76,7 @@
 							</div>
 						</li>
 						<li class="u-fw50 liSelect">
-							<label for="formJRF_versao">Versão</label>
+							<label for="formJRF_versao">Versão*</label>
 							<div>
 								<select name="versao" id="formJRF_versao" class="field" required>
 									<option value="" selected></option>
@@ -90,7 +86,7 @@
 							</div>
 						</li>
 						<li class="u-fw50 liSelect">
-							<label for="formJRF_anoF">Ano de fabricação</label>
+							<label for="formJRF_anoF">Ano de fabricação*</label>
 							<div>
 								<select name="anoF" id="formJRF_anoF" class="field" required>
 									<option value="" selected></option>
@@ -100,7 +96,7 @@
 							</div>
 						</li>
 						<li class="u-fw50 liSelect">
-							<label for="formJRF_anoM">Ano modelo</label>
+							<label for="formJRF_anoM">Ano modelo*</label>
 							<div>
 								<select name="anoM" id="formJRF_anoM" class="field" required>
 									<option value="" selected></option>
@@ -110,10 +106,10 @@
 							</div>
 						</li>
 						<li class="u-fw30">
-							<label for="formJRF_placa">Placa do veículo</label>
+							<label for="formJRF_placa">Placa do veículo*</label>
 							<input id="formJRF_placa" type="text" class="field" name="placa" required>
 						</li>
-						<li class="u-fw20 liCheckbox">
+						<li class="u-fw20 liRadio li0km">
 							<div>
 								<label for="optZeroKM">Zero KM</label>
 								<input type="checkbox" id="optZeroKM">
@@ -125,7 +121,7 @@
 					</ul>
 				</div>
 			</section>
-			<section id="informacoes-complementares" class="fieldsetHero">
+			<section id="informacoes-complementares" class="u-dnone fieldsetHero">
 				<div class="c-simpleForm__fieldsetTitle">
 					<div>
 						<h2><strong>Informações </strong>complementares</h2>
@@ -135,7 +131,7 @@
 				</div>
 				<div class="c-simpleForm__fields">
 					<ul>
-						<li class="u-fw100 liCheckbox">
+						<li class="u-fw100 liCheckbox liCarProperties">
 							<div>
 								<label for="caracteristica1">Alarme</label>
 								<input type="checkbox" id="caracteristica1">
@@ -165,7 +161,7 @@
 						<li class="u-fw50 liSelect">
 							<label for="formJRF_sexo">Sexo</label>
 							<div>
-								<select name="sexo" id="formJRF_sexo" class="field" required>
+								<select name="sexo" id="formJRF_sexo" class="field">
 									<option value="" selected></option>
 									<option value="m">Masculino</option>
 									<option value="f">Feminino</option>
@@ -173,7 +169,7 @@
 							</div>
 						</li>
 						<li class="u-fw50 liSelect">
-							<label for="formJRF_estadoCivil">Estado Civil</label>
+							<label for="formJRF_estadoCivil">Estado Civil*</label>
 							<div>
 								<select name="estadoCivil" id="formJRF_estadoCivil" class="field" required>
 									<option value="" selected></option>
@@ -184,8 +180,7 @@
 						</li>
 						<li class="u-fw50">
 							<label for="formJRF_cep">CEP</label>
-							<input id="formJRF_cep" type="text" class="field cepMask" name="cep"
-									placeholder="___.___.___-__" required>
+							<input id="formJRF_cep" type="text" class="field cepMask" name="cep" required>
 						</li>
 						<li class="u-fw50 liLink">
 							<a href="#">Não sei o meu CEP</a>
@@ -196,7 +191,7 @@
 					</ul>
 					<ul>
 						<h3><strong>Quem é o </strong>condutor principal?</h3>
-						<li class="u-fw100 liRadio">
+						<li class="u-fw100 liRadio u-jcfs u-aic">
 							<div>
 								<label for="radio1" class="js-userName">Célio Bitran</label>
 								<input type="radio" id="radio1" name="radioGroup" checked>
@@ -207,17 +202,17 @@
 							</div>
 						</li>
 					</ul>
-					<ul class="u-dnone js-firstDriver">
+					<ul class="js-firstDriver">
 						<li class="u-fw50">
-							<label for="formJRF_idadeCNH">Com quantos anos tirou a carteira?</label>
-							<input id="formJRF_idadeCNH" type="text" name="idadeCNH" class="field" required>
+							<label for="formJRF_idadeCNH">Com quantos anos tirou a carteira?*</label>
+							<input id="formJRF_idadeCNH" type="number" name="idadeCNH" class="field" required>
 						</li>
 						<li class="u-fw50">
-							<label for="formJRF_profissao">Profissão</label>
+							<label for="formJRF_profissao">Profissão*</label>
 							<input id="formJRF_profissao" type="text" name="profissao" class="field" required>
 						</li>
 						<li class="u-fw50 liSelect">
-							<label for="formJRF_moradia">Tipo de moradia</label>
+							<label for="formJRF_moradia">Tipo de moradia*</label>
 							<div>
 								<select name="moradia" id="formJRF_moradia" class="field" required>
 									<option value="" selected></option>
@@ -227,7 +222,7 @@
 							</div>
 						</li>
 						<li class="u-fw50 liSelect">
-							<label for="formJRF_menor">Algum menor dirige o carro?</label>
+							<label for="formJRF_menor">Algum menor dirige o carro?*</label>
 							<div>
 								<select name="menor" id="formJRF_menor" class="field" required>
 									<option value="" selected></option>
@@ -242,20 +237,19 @@
 					</ul>
 					<ul class="u-dnone js-otherDriver">
 						<li class="u-fw50">
-							<label for="formJRF_condutorPrincipal">Condutor Principal</label>
-							<input id="formJRF_condutorPrincipal" type="text" name="condutorPrincipal" class="field"
-									required>
+							<label for="formJRF_condutorPrincipal">Condutor Principal*</label>
+							<input id="formJRF_condutorPrincipal" type="text" name="condutorPrincipal" class="field" required>
 						</li>
 						<li class="u-fw50 liData">
 							<label for="formJRF_dataD2">Data de Nascimento</label>
 							<div class="fieldsBox">
-								<input id="formJRF_dataD2" type="text" name="data" required>
-								<input id="formJRF_dataM2" type="text" name="data" required>
-								<input id="formJRF_dataY2" type="text" name="data" required>
+								<input id="formJRF_dataD2" min="1" max="31" type="number" name="data">
+								<input id="formJRF_dataM2" min="1" max="12" type="number" name="data">
+								<input id="formJRF_dataY2" min="1890" max="2002" type="number" name="data">
 							</div>
 						</li>
 						<li class="u-fw50 liSelect">
-							<label for="formJRF_sexo2">Sexo</label>
+							<label for="formJRF_sexo2">Sexo*</label>
 							<div>
 								<select name="sexo2" id="formJRF_sexo2" class="field" required>
 									<option value="" selected></option>
@@ -265,7 +259,7 @@
 							</div>
 						</li>
 						<li class="u-fw50 liSelect">
-							<label for="formJRF_estadoCivil2">Estado Civil</label>
+							<label for="formJRF_estadoCivil2">Estado Civil*</label>
 							<div>
 								<select name="estadoCivil2" id="formJRF_estadoCivil2" class="field" required>
 									<option value="" selected></option>
@@ -275,9 +269,8 @@
 							</div>
 						</li>
 						<li class="u-fw50">
-							<label for="formJRF_cep2">CEP</label>
-							<input id="formJRF_cep2" type="text" class="field cepMask" name="cep2"
-									placeholder="_____-___" required>
+							<label for="formJRF_cep2">CEP*</label>
+							<input id="formJRF_cep2" type="text" class="field cepMask" name="cep2" required>
 						</li>
 						<li class="u-fw50 liBtn">
 							<button class="c-btn">Enviar</button>

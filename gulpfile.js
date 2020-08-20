@@ -37,8 +37,8 @@ var jsLibraries__files = [
     'libraries/isjs/is.min.js',
     'libraries/forms/forms.min.js',
     'libraries/laures/lauresFunctions.js',
-    'libraries/fancybox/jquery.fancybox.min.js',
-    'libraries/splide/splide.min.js',
+    //'libraries/fancybox/jquery.fancybox.min.js',
+    //'libraries/splide/splide.min.js',
     //'libraries/aos/aos.js',
     //'libraries/swiper/swiper.min.js',
 ];
@@ -51,26 +51,26 @@ gulp.task('jsLibraries', function(done) {
 });
 
 //Libraries - CSS Files
-var cssLibraries__files = [
-    'libraries/fancybox/jquery.fancybox.min.css',
-    'libraries/splide/splide.min.css',
-    'libraries/splide/splide-skyblue.min.css',
-    // 'libraries/aos/aos.css',
-    // 'libraries/swiper/swiper.min.css',
-];
-gulp.task('cssLibraries', function(done) {
-    gulp.src(cssLibraries__files)
-        .pipe(sourcemaps.init())
-        .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-        .pipe(concat('libraries-min.css'))
-        .pipe(sourcemaps.write('./'))
-        .pipe(minifycss())
-        .pipe(gulp.dest('dist/'));
-    done();
-});
+// var cssLibraries__files = [
+//     //'libraries/fancybox/jquery.fancybox.min.css',
+//     //'libraries/splide/splide.min.css',
+//     //'libraries/splide/splide-skyblue.min.css',
+//     // 'libraries/aos/aos.css',
+//     // 'libraries/swiper/swiper.min.css',
+// ];
+// gulp.task('cssLibraries', function(done) {
+//     gulp.src(cssLibraries__files)
+//         .pipe(sourcemaps.init())
+//         .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+//         .pipe(concat('libraries-min.css'))
+//         .pipe(sourcemaps.write('./'))
+//         .pipe(minifycss())
+//         .pipe(gulp.dest('dist/'));
+//     done();
+// });
 
 // Default
-gulp.task('default', gulp.series('styles', 'scripts', 'jsLibraries', 'cssLibraries', function(done) {
+gulp.task('default', gulp.series('styles', 'scripts', 'jsLibraries', function(done) {
     done();
 }));
 

@@ -52,7 +52,7 @@
 	$js_components = 'dist/components-min.js';
 
 	$load_this_js = array($js_jquery, $js_libraries, $js_components, $js_allPages);
-	$load_this_css = array($css_libraries, $css_allPages);
+	$load_this_css = array($css_allPages);
 
 	# carrega os estilos/scripts por página
 	# muda titulo de cada página

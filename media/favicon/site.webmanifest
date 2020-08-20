@@ -1,6 +1,6 @@
 {
-    "name": "Laures",
-    "short_name": "Laures",
+    "name": "Drive Select",
+    "short_name": "Drive Select",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#0a1b1f",
-    "background_color": "#0a1b1f",
+    "theme_color": "#102037",
+    "background_color": "#102037",
     "display": "standalone"
 }
