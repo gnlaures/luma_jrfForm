@@ -121,7 +121,7 @@
 					</ul>
 				</div>
 			</section>
-			<section id="informacoes-complementares" class="u-dnone fieldsetHero">
+			<section id="informacoes-complementares" class="fieldsetHero">
 				<div class="c-simpleForm__fieldsetTitle">
 					<div>
 						<h2><strong>Informações </strong>complementares</h2>
@@ -288,27 +288,21 @@
 			ajuda-lo</p>
 		<ul class="c-formSteps">
 			<li>
-				<a href="#" class="is-active">
+				<a href="#dados-pessoais" class="is-active">
 					<div><strong>Dados </strong> pessoais</div>
 					<span class="jrfForm --step1 is-checked">
 				</a>
 			</li>
 			<li>
-				<a href="#" class="is-active">
+				<a href="#dados-veiculo" class="is-active">
 					<div><strong>Dados </strong> do veículo</div>
 					<span class="jrfForm --step2">
 				</a>
 			</li>
 			<li>
-				<a href="#">
-					<div>Acessórios</div>
+				<a href="#informacoes-complementares">
+					<div>Informações Complementares</div>
 					<span class="jrfForm --step3">
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<div>Acessórios</div>
-					<span class="jrfForm --step4">
 				</a>
 			</li>
 		</ul>

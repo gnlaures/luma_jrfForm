@@ -14,3 +14,9 @@ if (is.not.ie()) {
         }
     }).trigger('focusout');
 }
+
+$('.c-formSteps a').on('click', function(e) {
+    e.preventDefault();
+    var finalDestiny = $(this).attr('href');
+    goToSection__scroll(finalDestiny, 20, 20, 700, 10);
+});

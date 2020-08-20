@@ -35,6 +35,12 @@
     .c-simpleForm li.u-fw50 {
         @include flexWidth(100%);
     }
+    .c-simpleForm li.u-fw30 {
+        @include flexWidth(60%);
+    }
+    .c-simpleForm li.u-fw20 {
+        @include flexWidth(40%);
+    }
     .c-simpleForm li.liData {
         justify-content: flex-start;
         label {
@@ -69,14 +75,6 @@
         order: 1;
         height: auto;
         padding: 50px;
-    }
-}
-@media screen and (max-width: 540px) {
-    .c-simpleForm li.u-fw30 {
-        @include flexWidth(60%);
-    }
-    .c-simpleForm li.u-fw20 {
-        @include flexWidth(40%);
     }
 }
 @media screen and (max-width: 410px) {
