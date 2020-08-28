@@ -1,4 +1,4 @@
-@mixin paragrafos($tc: $text, $fw: $fwLight, $fs: 14px, $lh: 1.2, $mb: 15px, $mbLOT: 0) {
+@mixin paragrafos($tc: $white, $fw: $fwLight, $fs: 14px, $lh: 1.2, $mb: 15px, $mbLOT: 0) {
     font-family: $fontFamily__secondary;
     color: $tc;
     font-size: $fs;
@@ -32,7 +32,7 @@
     }
 }
 
-@mixin title($tc: $primary, $ta: left, $fs: 30px) {
+@mixin title($tc: $white, $ta: left, $fs: 15px) {
     display: block;
     width: 100%;
     color: $tc;
@@ -43,16 +43,15 @@
     font-weight: $fwLight;
     strong {
         font-weight: $fwMedium;
-        display: block;
+        display: inline;
         width: 100%;
     }
 }
 
 @mixin labelTextStyle() {
-    @include opacity(0.5);
     font-family: $fontFamily__default;
     font-weight: $fwRegular;
     text-transform: uppercase;
-    color: #000;
+    color: #8C8C8F;
     font-size: 12px;
 }

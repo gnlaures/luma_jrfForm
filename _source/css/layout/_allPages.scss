@@ -1,6 +1,7 @@
 // <>
 body {
 	@include scroll();
+	background: $primary;
 }
 
 // c
@@ -62,9 +63,8 @@ body {
 		margin-bottom: 15px;
 	}
 	h2 {
-		@include title($ta: right, $fs: 25px);
+		@include title($fs: 15px);
 		@include opacity(0.7);
-		margin-bottom: 15px;
 	}
 	h3 {
 		@include title($fs: 18px);
@@ -79,26 +79,22 @@ body {
 	}
 	
 	.fieldsetHero {
-		display: flex;
-		flex-direction: row;
-		align-items: flex-start;
-		flex-wrap: nowrap;
-	}
-	&__fieldsetTitle {
-		@include flexWidth(205px);
-		padding-top: 20px;
-		padding-bottom: 20px;
-		padding-right: 35px;
-		p {
-			text-align: right;
+		@include transition($duration: 300ms);
+		@include u-hideElement;
+		display: block;
+		margin-bottom: 40px;
+		&.is-active {
+			@include u-showElement;
 		}
 	}
+	&__fieldsetTitle {
+		display: block;
+		width: 100%;
+	}
 	&__fields {
-		flex: 1 1 auto;
-		padding-left: 35px;
-		padding-top: 20px;
-		padding-bottom: 20px;
-		border-left: 1px solid rgba(0,0,0,0.15);
+		display: block;
+		width: 100%;
+		margin-top: 15px;
 	}
 	
 	ul {
@@ -111,7 +107,7 @@ body {
 	li {
 		position: relative;
 		display: block;
-		border:2px solid $white;
+		border: 1px solid $primary;
 	}
 	li.liBtn {
 		display: flex;
@@ -211,15 +207,14 @@ body {
 				left: 0;
 			}
 			input {
-				@include flexWidth(24px);
+				@include flexWidth(18px);
 				display: block;
 				padding: 0;
-				height: 24px;
+				height: 18px;
+				border: 3px solid transparent;
 				&:checked {
-					background: url(#{$media_icons}/icon_checked.svg);
-					background-repeat: no-repeat;
-					background-size: cover;
-					background-position: center;
+					background: $green;
+					border: 3px solid #8C8C8F;
 				}
 			}
 		}
@@ -229,6 +224,7 @@ body {
 		flex-direction: row;
 		align-items: center;
 		flex-wrap: wrap;
+		min-height: 52px;
 		div {
 			display: flex;
 			flex-direction: row;
@@ -251,16 +247,15 @@ body {
 				left: 0;
 			}
 			input {
-				@include flexWidth(24px);
+				@include flexWidth(18px);
 				@include roundedAll(12px);
 				display: block;
 				padding: 0;
-				height: 24px;
+				height: 18px;
+				border: 3px solid transparent;
 				&:checked {
-					background: url(#{$media_icons}/icon_checked.svg);
-					background-repeat: no-repeat;
-					background-size: cover;
-					background-position: center;
+					background: $green;
+					border: 3px solid #8C8C8F;
 				}
 			}
 		}
@@ -302,8 +297,67 @@ body {
 		}
 	}
 	
+	label, input, select, textarea {
+		@include transition();
+		display: block;
+		width: 100%;
+	}
+	input, select, textarea {
+		background: #434347;
+		@include paragrafos;
+		@include placeholder {
+			@include paragrafos($tc: $placeholderText);
+		}
+		&.error{
+			border: 1px solid $feedbackError;
+		}
+		&:focus {
+			background: #4a4a4f;
+		}
+	}
+	input, select {
+		height: 52px;
+		line-height: 30px;
+		padding-top: 22px;
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-bottom: 0;
+	}
+	select {
+		option {
+			background: $primary;
+			color: $white;
+			line-height: 20px;
+		}
+		&:invalid {
+			color: $placeholderText;
+		}
+	}
+	textarea {
+		padding: 15px 20px;
+		line-height: 1.5;
+		height: 100px;
+		max-height: 200px;
+		min-height: 100px;
+		resize: vertical;
+	}
+	label {
+		@include labelTextStyle();
+		display: block;
+		position: absolute;
+		top: 10px;
+		left: 15px;
+		z-index: 2;
+		&.error{
+			font-size: 12px;
+			color: $feedbackError;
+			bottom: -5px;
+			left: 15px;
+			position: absolute;
+		}
+	}
+	
 	li.li0km {
-		justify-content: center;
 		div {
 			justify-content: center;
 			label {
@@ -313,7 +367,18 @@ body {
 		}
 	}
 	li.liCarProperties {
-		margin-bottom: 30px;
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		> div {
+			@include flexWidth(25%);
+			label {
+				@include opacity(1);
+				font-weight: $fwRegular;
+				color: $white;
+			}
+		}
 	}
 	li.liLink {
 		display: flex;
@@ -336,64 +401,58 @@ body {
 			@include labelTextStyle;
 		}
 	}
-	
-	label, input, select, textarea {
-		@include transition();
-		display: block;
-		width: 100%;
-	}
-	input, select, textarea {
-		background: rgba(196,196,196,0.25);
-		@include paragrafos;
-		@include placeholder {
-			@include paragrafos($tc: $placeholderText);
+	li.liCheckboxSimilarToTitles {
+		min-height: 18px;
+		> div input {
+			display: none !important;
 		}
-		&.error{
-			border: 1px solid $feedbackError;
-		}
-		&:focus {
-			background: rgba(196,196,196,0.45);
-		}
-	}
-	input, select {
-		height: 52px;
-		line-height: 30px;
-		padding-top: 22px;
-		padding-left: 15px;
-		padding-right: 15px;
-		padding-bottom: 0;
-	}
-	select {
-		&:invalid {
-			color: $placeholderText;
-		}
-	}
-	textarea {
-		padding: 15px 20px;
-		line-height: 1.5;
-		height: 100px;
-		max-height: 200px;
-		min-height: 100px;
-		resize: vertical;
-	}
-	label {
-		@include labelTextStyle();
-		display: block;
-		position: absolute;
-		top: 10px;
-		left: 15px;
-		&.error{
-			font-size: 12px;
-			color: $feedbackError;
-			bottom: -5px;
-			left: 15px;
-			position: absolute;
+		> div label {
+			padding-left: 0;
+			@include title($fs: 15px);
+			@include opacity(0.7);
 		}
 	}
 }
 
-// #
+// project
+.jrfHero {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	aside {
+		right: -500px;
+	}
+	main {
+		padding: 90px 65px;
+	}
+	&.is-active {
+		aside {
+			right: 0;
+		}
+		main {
+			padding: 90px 515px 90px 65px;
+		}
+	}
+}
+header {
+	margin-bottom: 65px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	a {
+		display: block;
+		width: 100%;
+		max-width: 234px;
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+}
 aside {
+	@include transition($duration: 250ms);
 	@include scroll();
 	overflow: auto;
 	position: fixed;
@@ -403,32 +462,100 @@ aside {
 	width: 100%;
 	max-width: 450px;
 	height: 100vh;
-	background: $primary;
+	background: $primaryDark;
 	padding: 90px 65px 65px 65px;
+	.asideSection {
+		margin-bottom: 15px;
+		padding-bottom: 15px;
+		border-bottom: 1px solid #434347;
+		span {
+			@include opacity(0.7);
+			text-transform: uppercase;
+			font-weight: $fwRegular;
+			font-size: 15px;
+			line-height: 141.2%;
+			color: #FFFFFF;
+		}
+		.editLine {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			span {
+				font-weight: $fwSemiBold;
+			}
+			a {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-between;
+				&:hover {
+					text-decoration: underline;
+				}
+				svg {
+					@include opacity(0.7);
+					display: block;
+					width: 3px;
+					height: 18px;
+					margin-left: 5px;
+					path {
+						fill: $white;
+					}
+				}
+			}
+		}
+	}
+	.asideTopics {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		@include calcWidthForPositionNegative(-5px);
+		li {
+			@include flexWidth(50%);
+			padding: 5px;
+			padding-left: 20px;
+			position: relative;
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				left: 0;
+				top: 6px;
+				width: 8px;
+				height: 8px;
+				background: $green;
+				border: 3px solid #8C8C8F;
+			}
+		}
+	}
 	h1 {
-		@include title($tc: $white);
 		@include opacity(0.7);
-		margin-bottom: 20px;
+		text-transform: uppercase;
+		font-weight: $fwMedium;
+		font-size: 45px;
+		line-height: 141.2%;
+		color: #FFFFFF;
+	}
+	h2 {
+		@include opacity(0.7);
+		@include labelTextStyle;
+		font-weight: $fwMedium;
+		font-size: 15px;
+		color: #FFFFFF;
 	}
 	p {
-		@include paragrafos($tc: $white);
 		@include opacity(0.7);
-	}
-	.c-formSteps {
-		margin-top: 60px;
+		@include labelTextStyle;
+		color: $white;
 	}
 }
 main {
+	@include transition($duration: 250ms);
 	width: 100%;
-	padding: 90px 515px 90px 65px;
 }
 
-#informacoes-complementares {
-	h3 {
+#informacoes-veiculo {
+	li.liBtn {
 		margin-top: 30px;
-		margin-bottom: 20px;
-	}
-	li.liRadio {
-		margin-bottom: 20px;
 	}
 }

@@ -59,7 +59,6 @@
     }
 }
 
-
 // hamburguer menu
 .c-hamburguer {
     @include transforms(translateY(-50%), center);
@@ -151,10 +150,10 @@ $c_btnIcon_maxWidth: 100%;
     white-space: nowrap;
     // default btns
     &.--primary {
-        background: $primary;
+        background: $primaryDark;
         color: $white;
         &:hover {
-            background: $primaryDark;
+            background: $green;
         }
     }
     &.--secondary {
@@ -819,65 +818,46 @@ $c_btnIcon_maxWidth: 100%;
     }
 }
 .c-toggleList {
-    margin-bottom: 10px;
-    &:last-of-type {
-        margin-bottom: 0;
-    }
+    margin-bottom: 30px;
+    position: relative;
     &__header {
         background: $primary;
-        padding: 10px 20px;
-        padding-right: 45px;
         display: block;
         position: relative;
         cursor: pointer;
-        &:hover {
-            background: $primaryDark;
-        }
-        > * {
-            @include transition();
-            color: $white;
-        }
-        &:after {
-            @include transition();
-            @include transforms(translateY(-50%), center);
-            content: '';
-            display: block;
-            width: 14px;
-            height: 14px;
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            background: url(#{$media_assets}caret-down-white.svg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-        }
+        margin-bottom: 10px;
     }
     &__content {
         @include transition();
         @include u-hideElement;
         display: block;
-        padding: 0 20px;
-        border-left: 2px solid $primary;
-        border-right: 2px solid $primary;
-        border-bottom: 2px solid $primary;
         overflow: hidden;
         max-height: 0;
     }
     
-    &.is-active {
-        .c-toggleList__header {
-            > * {
-                color: $secondary;
-            }
-            &:after {
-                @include transforms(translateY(-50%) rotate(180deg), center);
+    &.--withCheckbox {
+        > input {
+            @include flexWidth(18px);
+            display: block;
+            padding: 0;
+            height: 18px;
+            border: 3px solid transparent;
+            position: absolute;
+            left: -30px;
+            top: 0;
+            cursor: pointer;
+            pointer-events: none;
+            &:checked {
+                background: $green;
+                border: 3px solid #8C8C8F;
             }
         }
+    }
+    
+    &.is-active {
         .c-toggleList__content {
             @include u-showElement;
-            overflow: auto;
-            padding: 20px;
+            overflow: hidden;
             max-height: inherit;
         }
     }

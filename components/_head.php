@@ -48,7 +48,7 @@
 
 	<!-- css files -->
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <?php echoCssFiles($load_this_css); ?>
+	<link href="dist/allPages-min.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
