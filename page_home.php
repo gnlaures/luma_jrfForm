@@ -3,6 +3,7 @@
 		<header>
 			<a href="./"><img src="media/img/assets/brand.png" alt="Energy Broker"></a>
 		</header>
+
 		<form action="#" id="formJRF" class="c-simpleForm">
 			<div class="u-container">
 				<section id="sobre-voce" class="is-active fieldsetHero">
@@ -279,10 +280,7 @@
 				<section id="final" style="display: none" class="fieldsetHero">
 					<div class="js-load load">Por favor, aguarde</div>
 					<div class="loadCaption">Estamos processando as informações da sua simulação</div>
-					<ul class="c-responsiveGrid"
-							data-maxw-breaks="900, 400"
-							data-maxw-cols="2, 1"
-							data-cols-init="3">
+					<ul class="gridCardsBuy">
 						<li>
 							<div class="c-cardPlan">
 								<figure class="c-cardPlan__figure">
@@ -291,13 +289,113 @@
 								<div class="c-cardPlan__description">
 									<div class="description__prices">
 										<span class="label"><strong>3x R$</strong></span>
-										<span class="priceMaster">20.896,00</span>
+										<span class="priceMaster"><strong>20.896,00</strong></span>
 										<span class="label"><strong>Sem Juros</strong></span>
 										<hr>
 										<span class="label"><strong>R$ 2.689,30</strong></span>
 										<span class="label">À Vista</span>
 									</div>
-									<div class="c-cardPlan__btn">
+									<div class="description__btn">
+										<a href="#" class="c-btn">Contratar</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="c-cardPlan">
+								<figure class="c-cardPlan__figure">
+									<img src="https://via.placeholder.com/130x60" alt="SUHAI Seguros">
+								</figure>
+								<div class="c-cardPlan__description">
+									<div class="description__prices">
+										<span class="label"><strong>3x R$</strong></span>
+										<span class="priceMaster"><strong>20.896,00</strong></span>
+										<span class="label"><strong>Sem Juros</strong></span>
+										<hr>
+										<span class="label"><strong>R$ 2.689,30</strong></span>
+										<span class="label">À Vista</span>
+									</div>
+									<div class="description__btn">
+										<a href="#" class="c-btn">Contratar</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="c-cardPlan">
+								<figure class="c-cardPlan__figure">
+									<img src="https://via.placeholder.com/130x60" alt="SUHAI Seguros">
+								</figure>
+								<div class="c-cardPlan__description">
+									<div class="description__prices">
+										<span class="label"><strong>3x R$</strong></span>
+										<span class="priceMaster"><strong>20.896,00</strong></span>
+										<span class="label"><strong>Sem Juros</strong></span>
+										<hr>
+										<span class="label"><strong>R$ 2.689,30</strong></span>
+										<span class="label">À Vista</span>
+									</div>
+									<div class="description__btn">
+										<a href="#" class="c-btn">Contratar</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="c-cardPlan">
+								<figure class="c-cardPlan__figure">
+									<img src="https://via.placeholder.com/130x60" alt="SUHAI Seguros">
+								</figure>
+								<div class="c-cardPlan__description">
+									<div class="description__prices">
+										<span class="label"><strong>3x R$</strong></span>
+										<span class="priceMaster"><strong>20.896,00</strong></span>
+										<span class="label"><strong>Sem Juros</strong></span>
+										<hr>
+										<span class="label"><strong>R$ 2.689,30</strong></span>
+										<span class="label">À Vista</span>
+									</div>
+									<div class="description__btn">
+										<a href="#" class="c-btn">Contratar</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="c-cardPlan">
+								<figure class="c-cardPlan__figure">
+									<img src="https://via.placeholder.com/130x60" alt="SUHAI Seguros">
+								</figure>
+								<div class="c-cardPlan__description">
+									<div class="description__prices">
+										<span class="label"><strong>3x R$</strong></span>
+										<span class="priceMaster"><strong>20.896,00</strong></span>
+										<span class="label"><strong>Sem Juros</strong></span>
+										<hr>
+										<span class="label"><strong>R$ 2.689,30</strong></span>
+										<span class="label">À Vista</span>
+									</div>
+									<div class="description__btn">
+										<a href="#" class="c-btn">Contratar</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="c-cardPlan">
+								<figure class="c-cardPlan__figure">
+									<img src="https://via.placeholder.com/130x60" alt="SUHAI Seguros">
+								</figure>
+								<div class="c-cardPlan__description">
+									<div class="description__prices">
+										<span class="label"><strong>3x R$</strong></span>
+										<span class="priceMaster"><strong>20.896,00</strong></span>
+										<span class="label"><strong>Sem Juros</strong></span>
+										<hr>
+										<span class="label"><strong>R$ 2.689,30</strong></span>
+										<span class="label">À Vista</span>
+									</div>
+									<div class="description__btn">
 										<a href="#" class="c-btn">Contratar</a>
 									</div>
 								</div>
