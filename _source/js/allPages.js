@@ -77,3 +77,9 @@ $('.c-hamburguer').on('click', function() {
    $(this).toggleClass('is-active');
    $('.jrfHero').toggleClass('is-active');
 });
+
+// main close menu
+$('main').on('click', function () {
+    $('.c-hamburguer').removeClass('is-active');
+    $('.jrfHero').removeClass('is-active');
+})
