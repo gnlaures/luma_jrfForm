@@ -61,15 +61,15 @@
 
 // hamburguer menu
 .c-hamburguer {
-    @include transforms(translateY(-50%), center);
     display: none;
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    z-index: 4;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: $primaryDark;
+    padding: 10px;
+    z-index: 12;
     .c-hamburguer__hero {
-        @include transforms($property: rotate(0deg));
-        @include transition();
+        @include transition($duration: 250ms);
         cursor: pointer;
         display: block;
         height: 26px;
@@ -100,11 +100,8 @@
         }
     }
     &.is-active {
-        margin-top: -10px;
-        right: 15px;
-        @include roundedAll(20px);
         .c-hamburguer__hero {
-            @include transforms($property: rotate(180deg) scale(0.8));
+            @include transforms(rotate(180deg) scale(0.6), center);
             .bar {
                 background: $white;
                 &.bar_1 {

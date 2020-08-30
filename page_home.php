@@ -1,4 +1,11 @@
 <div class="jrfHero">
+	<div class="c-hamburguer">
+		<div class="c-hamburguer__hero">
+			<span class="bar bar_1"></span>
+			<span class="bar bar_2"></span>
+			<span class="bar bar_3"></span>
+		</div>
+	</div>
 	<main>
 		<header>
 			<a href="./"><img src="media/img/assets/brand.png" alt="Energy Broker"></a>
@@ -418,10 +425,10 @@
 				</a>
 			</div>
 		</div>
-		<div class="asideSection asideTopics">
+		<ul class="asideSection asideTopics">
 			<li><p>ALARME sonoro</p></li>
 			<li><p>bloqueador de ignição</p></li>
-		</div>
+		</ul>
 		<ul class="asideSection asideEnd">
 			<li>
 				<h2>passa a noite na</h2>

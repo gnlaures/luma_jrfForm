@@ -64,9 +64,16 @@ $('.js-goToStep').on('click', function(e) {
     setTimeout(function(){ sectionFields.el.hide('fast'); }, 150);
     setTimeout(function(){ $(thisHref).show('fast'); }, 300);
     setTimeout(function(){ $(thisHref).addClass('is-active'); }, 500);
+    $('.c-hamburguer').addClass('is-active');
 });
 
 // openAside
 $('.js-openAside').on('click', function() {
     $('.jrfHero').addClass('is-active');
+});
+
+// hamburguer mobile
+$('.c-hamburguer').on('click', function() {
+   $(this).toggleClass('is-active');
+   $('.jrfHero').toggleClass('is-active');
 });
