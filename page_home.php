@@ -10,7 +10,6 @@
 		<header>
 			<a href="./"><img src="media/img/assets/brand.png" alt="Energy Broker"></a>
 		</header>
-
 		<form action="#" id="formJRF" class="c-simpleForm">
 			<div class="u-container">
 				<section id="sobre-voce" class="is-active fieldsetHero">
@@ -174,8 +173,8 @@
 							<div class="c-toggleList__content">
 								<ul>
 									<li class="u-fw25">
-										<label for="formId_cep">CEP</label>
-										<input id="formId_cep" type="text" class="field cepMask" name="cep" placeholder="_____-___" required>
+										<label for="formJRF_cep2">CEP*</label>
+										<input id="formJRF_cep2" type="text" class="field" name="cep" placeholder="_____-___" required>
 									</li>
 									<li class="u-fw25 liSelect">
 										<label for="formJRF_localNoite">Onde?*</label>
@@ -201,8 +200,8 @@
 							<div class="c-toggleList__content">
 								<ul>
 									<li class="u-fw20">
-										<label for="formId_cep">CEP</label>
-										<input id="formId_cep" type="text" class="field cepMask" name="cep" placeholder="_____-___" required>
+										<label for="formJRF_cep3">CEP*</label>
+										<input id="formJRF_cep3" type="text" class="field" name="cep" placeholder="_____-___" required>
 									</li>
 									<li class="u-fw20 liSelect">
 										<label for="formJRF_localGenerico">Local</label>
@@ -225,8 +224,8 @@
 										</div>
 									</li>
 									<li class="u-fw30 liSelect">
-										<label for="formId_distanciaAproximada">Distância aproximada (km)</label>
-										<input id="formId_distanciaAproximada" type="text" name="distanciaAproximada" class="field">
+										<label for="formJRF_distanciaAproximada">Distância aproximada (km)</label>
+										<input id="formJRF_distanciaAproximada" type="text" name="distanciaAproximada" class="field">
 									</li>
 									<li class="u-fw100 liLink">
 										<a href="#">Não sei meu CEP</a>
@@ -265,13 +264,12 @@
 							</div>
 						</div>
 						<div class="c-toggleList --withCheckbox is-active">
-							<input type="checkbox">
+							<input type="checkbox" id="optLazer">
 							<div class="c-toggleList__content">
 								<ul>
 									<li class="u-fw100 liRadio liCheckboxSimilarToTitles">
 										<div>
 											<label for="optLazer"><strong>Lazer</strong>?</label>
-											<input type="checkbox" id="optLazer">
 										</div>
 									</li>
 								</ul>

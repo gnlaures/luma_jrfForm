@@ -384,9 +384,12 @@ body {
 		display: flex;
 		align-items: center;
 		padding-left: 10px;
+		padding-top: 10px;
 		a {
 			@include labelTextStyle;
-			color: $primary;
+			color: $white;
+			text-transform: uppercase;
+			@include opacity(0.7);
 			&:hover {
 				text-decoration: underline;
 			}

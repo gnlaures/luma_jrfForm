@@ -82,4 +82,26 @@ $('.c-hamburguer').on('click', function() {
 $('main').on('click', function () {
     $('.c-hamburguer').removeClass('is-active');
     $('.jrfHero').removeClass('is-active');
-})
+});
+
+// 1 - percorrer os pais
+// 2 - verificar no change se todos os filhos com o attr required estão preenchidos
+// 3 - se sim, checar a input
+// 4 - se nao, desmarcar a input
+
+$(".c-toggleList.--withCheckbox .field").on('change keyup', function() {
+    $(this).closest(".c-toggleList.--withCheckbox").each(function(index) {
+        $(this).find(".field").each(function(index) {
+            var thisAttrRequired = $(this).attr('required');
+            var thisContent = $(this).val();
+            console.log(thisContent)
+            if (thisAttrRequired === 'required') {
+                if ((thisContent !== '') || (thisContent !== 'undefined')) {
+                    $(this).closest(".c-toggleList.--withCheckbox").children('input').prop('checked', true);
+                } else {
+                    $(this).closest(".c-toggleList.--withCheckbox").children('input').prop('checked', false);
+                }
+            }
+        });
+    });
+});
