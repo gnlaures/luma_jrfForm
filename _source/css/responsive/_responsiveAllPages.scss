@@ -60,6 +60,18 @@
 }
 
 // forms
+@media screen and (max-width: 1100px) {
+    .c-simpleForm li.liCarProperties>div {
+        @include flexWidth(33.3%);
+    }
+}
+@media screen and (max-width: 1100px) {
+    .jrfHero.is-active {
+        .c-simpleForm li.liCarProperties>div {
+            @include flexWidth(50%);
+        }
+    }
+}
 @media screen and (max-width: 820px) {
     .c-simpleForm li.liCarProperties>div {
         @include flexWidth(50%);
@@ -76,6 +88,22 @@
     }
     .c-simpleForm li.liCarProperties>div {
         @include flexWidth(100%);
+    }
+}
+
+// grid final
+@media screen and (max-width: 1000px) {
+    #final .gridCardsBuy>li {
+        @include flexWidth(50%);
+    }
+}
+@media screen and (max-width: 800px) {
+    #final .gridCardsBuy>li {
+        @include flexWidth(100%);
+        .c-cardPlan.--withList {
+            margin: 0 auto;
+            max-width: 250px;
+        }
     }
 }
 

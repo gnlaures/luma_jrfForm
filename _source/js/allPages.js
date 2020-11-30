@@ -68,7 +68,9 @@ $('.js-goToStep').on('click', function(e) {
 });
 
 // openAside
-$('.js-openAside').on('click', function() {
+$('.js-openAside').on('click', function(e) {
+    e.preventDefault();
+    console.log('click');
     $('.jrfHero').addClass('is-active');
 });
 
@@ -79,7 +81,7 @@ $('.c-hamburguer').on('click', function() {
 });
 
 // main close menu
-$('main').on('click', function () {
+$('.closeAside').on('click', function () {
     $('.c-hamburguer').removeClass('is-active');
     $('.jrfHero').removeClass('is-active');
 });
@@ -88,7 +90,6 @@ $('main').on('click', function () {
 // 2 - verificar no change se todos os filhos com o attr required estão preenchidos
 // 3 - se sim, checar a input
 // 4 - se nao, desmarcar a input
-
 $(".c-toggleList.--withCheckbox .field").on('change keyup', function() {
     $(this).closest(".c-toggleList.--withCheckbox").each(function(index) {
         $(this).find(".field").each(function(index) {

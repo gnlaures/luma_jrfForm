@@ -833,6 +833,9 @@ $c_btnIcon_maxWidth: 100%;
     }
     
     &.--withCheckbox {
+        li.liRadio.liCheckboxSimilarToTitles {
+            min-height: auto;
+        }
         > input {
             @include flexWidth(18px);
             display: block;
